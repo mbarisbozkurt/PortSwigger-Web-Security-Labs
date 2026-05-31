@@ -20,7 +20,7 @@ Bu labda `category` parametresi SQL sorgusuna güvenli şekilde eklenmediği iç
 
 4. Response içinde `selam` değerinin döndüğünü gördüm. Bu yüzden ikinci kolonun string veri kabul ettiğini anladım.
 
-![String değer ikinci kolonda döndürülüyor](images/lab8_1.png)
+![String değer ikinci kolonda döndürülüyor](images/lab8/1.png)
 
 5. Daha sonra labın istediği random string değerini ikinci kolona yerleştirdim. Bu labda istenen değer `Z6YGcB` idi:
 
@@ -30,11 +30,11 @@ Bu labda `category` parametresi SQL sorgusuna güvenli şekilde eklenmediği iç
 
 6. Response içinde `Z6YGcB` değeri döndüğü için payload'ın doğru kolonda çalıştığını doğruladım.
 
-![Labın istediği string değer döndürülüyor](images/lab8_2.png)
+![Labın istediği string değer döndürülüyor](images/lab8/2.png)
 
 7. İstenen string response içinde döndüğü için lab başarıyla tamamlandı.
 
-![Lab başarıyla çözüldü](images/lab8_3.png)
+![Lab başarıyla çözüldü](images/lab8/3.png)
 
 ## 4. Kullanılan Payloadlar
 

@@ -28,11 +28,11 @@ Bu labda login formu geçersiz kullanıcı adı ve hatalı parola durumlarında 
 
 4. Attack sonucunda `academico:1111` kombinasyonunun diğer denemelerden farklı olarak `302` status code döndürdüğünü gördüm. Diğer başarısız denemeler `200` dönerken bu isteğin redirect alması login işleminin başarılı olduğunu gösterdi.
 
-![Intruder sonucu](images/lab4_1.png)
+![Intruder sonucu](images/lab4/1.png)
 
 5. Bulunan `academico:1111` bilgileriyle giriş yaptım ve `/my-account` sayfasına erişince lab çözüldü.
 
-![Lab solved](images/lab4_2.png)
+![Lab solved](images/lab4/2.png)
 
 ## 5. Impact
 

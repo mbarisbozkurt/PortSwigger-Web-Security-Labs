@@ -28,11 +28,11 @@ Bu labda login formu, hatalı giriş denemelerinde kullanıcı adı ve parola du
 
 4. Attack sonucunda `adam:harley` kombinasyonunun diğer denemelerden farklı olarak `302` status code döndürdüğünü gördüm. Diğer başarısız denemeler `200` dönerken bu isteğin redirect alması login işleminin başarılı olduğunu gösterdi.
 
-![Intruder sonucu](images/lab1_1.png)
+![Intruder sonucu](images/lab1/1.png)
 
 5. Bulunan `adam:harley` bilgileriyle giriş yapınca `/my-account` sayfasına yönlendirildim ve lab çözüldü.
 
-![Lab solved](images/lab1_2.png)
+![Lab solved](images/lab1/2.png)
 
 ## 5. Impact
 

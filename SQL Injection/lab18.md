@@ -36,11 +36,11 @@ Amaç, XML encoding kullanarak SQL injection filtresini bypass etmek, `users` ta
 administrator--2s8u7dp7kx4v5ye4e6q9
 ```
 
-![XML body içindeki storeId alanında hex_entities ile encode edilen UNION SELECT payload'ı çalıştırılıyor ve kullanıcı bilgileri response içinde dönüyor](images/lab18_1.png)
+![XML body içindeki storeId alanında hex_entities ile encode edilen UNION SELECT payload'ı çalıştırılıyor ve kullanıcı bilgileri response içinde dönüyor](images/lab18/1.png)
 
 4. Elde ettiğim parola ile `administrator` hesabına giriş yaptım ve labı tamamladım.
 
-![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab18_2.png)
+![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab18/2.png)
 
 ## 4. Kullanılan Payloadlar
 

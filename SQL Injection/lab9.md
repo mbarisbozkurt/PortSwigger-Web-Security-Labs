@@ -17,7 +17,7 @@ Bu labda `category` parametresi SQL sorgusuna güvenli şekilde eklenmediği iç
 ' UNION SELECT null,null--
 ```
 
-![İki kolonlu UNION SELECT payloadı response içinde çalışıyor](images/lab9_1.png)
+![İki kolonlu UNION SELECT payloadı response içinde çalışıyor](images/lab9/1.png)
 
 3. Veritabanındaki tabloları listelemek için `information_schema.tables` tablosundan `table_name` değerlerini çektim:
 
@@ -27,7 +27,7 @@ Bu labda `category` parametresi SQL sorgusuna güvenli şekilde eklenmediği iç
 
 4. Response içinde `users` tablosunun bulunduğunu gördüm.
 
-![users tablosu response içinde görüntüleniyor](images/lab9_2.png)
+![users tablosu response içinde görüntüleniyor](images/lab9/2.png)
 
 5. `users` tablosundaki kolon adlarını bulmak için `information_schema.columns` tablosunu sorguladım:
 
@@ -37,7 +37,7 @@ Bu labda `category` parametresi SQL sorgusuna güvenli şekilde eklenmediği iç
 
 6. Response içinde `username`, `email` ve `password` kolonlarının bulunduğunu tespit ettim.
 
-![users tablosundaki kolon adları görüntüleniyor](images/lab9_3.png)
+![users tablosundaki kolon adları görüntüleniyor](images/lab9/3.png)
 
 7. Kullanıcı adı ve parola bilgilerini çekmek için `users` tablosundan `username` ve `password` kolonlarını döndürdüm:
 
@@ -51,11 +51,11 @@ Bu labda `category` parametresi SQL sorgusuna güvenli şekilde eklenmediği iç
 administrator : lqc4y0w2b1imvjxg0fg8
 ```
 
-![administrator kullanıcısının parolası görüntüleniyor](images/lab9_4.png)
+![administrator kullanıcısının parolası görüntüleniyor](images/lab9/4.png)
 
 9. Bu bilgilerle `administrator` hesabına giriş yaparak labı tamamladım.
 
-![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab9_5.png)
+![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab9/5.png)
 
 ## 4. Kullanılan Payloadlar
 

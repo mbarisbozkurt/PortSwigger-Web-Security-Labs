@@ -26,25 +26,25 @@ Bu labda login formu, geçersiz kullanıcı adı ve hatalı parola denemelerinde
 
 2. IP bazlı brute-force korumasına takılmamak için request'e `X-Forwarded-For` header'ı ekledim. Intruder'da `X-Forwarded-For` değeri ve `username` parametresini payload position olarak işaretledim. Attack type olarak `Pitchfork` seçtim.
 
-![Username enumeration attack setup](images/lab5_1.png)
+![Username enumeration attack setup](images/lab5/1.png)
 
 3. Payload 1 alanına her denemede değişecek sayısal değerleri, Payload 2 alanına ise PortSwigger candidate usernames listesini ekledim. Password alanını sabit tuttum.
 
 4. Attack sonucunda response sürelerini karşılaştırdım. Diğer kullanıcı adlarına göre daha uzun response süresi döndüren `pi` kullanıcısının geçerli kullanıcı adı olduğunu tespit ettim.
 
-![Username enumeration result](images/lab5_2.png)
+![Username enumeration result](images/lab5/2.png)
 
 5. Geçerli kullanıcı adı olarak `pi` değerini sabitledim. Bu kez `X-Forwarded-For` header'ı ve `password` parametresini payload position olarak işaretledim. Payload 1 için yine değişen IP değerleri, Payload 2 için candidate passwords listesini kullandım.
 
-![Password brute-force attack setup](images/lab5_3.png)
+![Password brute-force attack setup](images/lab5/3.png)
 
 6. Password brute-force sonucunda `dallas` parolasının diğer denemelerden farklı olarak `302` status code döndürdüğünü gördüm. Bu redirect, login işleminin başarılı olduğunu gösterdi.
 
-![Password brute-force result](images/lab5_4.png)
+![Password brute-force result](images/lab5/4.png)
 
 7. Bulunan `pi:dallas` bilgileriyle giriş yaptım ve `/my-account` sayfasına erişince lab çözüldü.
 
-![Lab solved](images/lab5_5.png)
+![Lab solved](images/lab5/5.png)
 
 ## 5. Impact
 

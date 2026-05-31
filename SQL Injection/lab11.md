@@ -14,7 +14,7 @@ Amaç, bu koşullu response farkını kullanarak `administrator` kullanıcısın
 
 1. Burp Suite ile `/login` isteğini yakaladım ve `TrackingId` cookie değerinin response davranışını etkilediğini gözlemledim.
 
-![TrackingId cookie değeriyle yapılan normal istekte Welcome back mesajı görüntüleniyor](images/lab11_1.png)
+![TrackingId cookie değeriyle yapılan normal istekte Welcome back mesajı görüntüleniyor](images/lab11/1.png)
 
 2. Cookie içine her zaman doğru dönen bir koşul ekledim:
 
@@ -24,7 +24,7 @@ Amaç, bu koşullu response farkını kullanarak `administrator` kullanıcısın
 
 Bu koşul doğru olduğu için response içinde `Welcome back!` mesajı görünmeye devam etti.
 
-![Doğru boolean koşulda Welcome back mesajı response içinde kalıyor](images/lab11_2.png)
+![Doğru boolean koşulda Welcome back mesajı response içinde kalıyor](images/lab11/2.png)
 
 3. Ardından `administrator` kullanıcısının parolasının uzunluğunu test etmek için `LENGTH` fonksiyonunu kullandım:
 
@@ -34,7 +34,7 @@ Bu koşul doğru olduğu için response içinde `Welcome back!` mesajı görünm
 
 Koşula göre response içinde `Welcome back!` mesajının dönüp dönmediğini kontrol ederek parola uzunluğunu tespit ettim.
 
-![Parola uzunluğu LENGTH fonksiyonu ile koşullu olarak test ediliyor](images/lab11_3.png)
+![Parola uzunluğu LENGTH fonksiyonu ile koşullu olarak test ediliyor](images/lab11/3.png)
 
 4. Parolanın belirli pozisyonundaki karakterleri bulmak için `SUBSTRING` sorgusu kullandım:
 
@@ -44,15 +44,15 @@ Koşula göre response içinde `Welcome back!` mesajının dönüp dönmediğini
 
 Bu mantıkta karakter doğru olduğunda `Welcome back!` mesajı dönüyor, yanlış olduğunda dönmüyordu.
 
-![SUBSTRING ile administrator parolasının belirli karakteri test ediliyor](images/lab11_4.png)
+![SUBSTRING ile administrator parolasının belirli karakteri test ediliyor](images/lab11/4.png)
 
 5. Burp Intruder ile parola pozisyonlarını ve olası karakterleri otomatik olarak denedim. Response farkını `Welcome back!` mesajına göre filtreleyerek doğru karakterleri belirledim.
 
-![Burp Intruder sonuçlarında doğru pozisyon ve karakter eşleşmeleri görüntüleniyor](images/lab11_5.png)
+![Burp Intruder sonuçlarında doğru pozisyon ve karakter eşleşmeleri görüntüleniyor](images/lab11/5.png)
 
 6. Intruder sonuçlarından `administrator` kullanıcısının parolasını çıkardım, bu parola ile hesaba giriş yaptım ve labı tamamladım.
 
-![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab11_6.png)
+![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab11/6.png)
 
 ## 4. Kullanılan Payloadlar
 

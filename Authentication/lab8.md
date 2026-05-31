@@ -22,29 +22,29 @@ Bu labda iki faktörlü doğrulama akışı, doğrulanacak kullanıcıyı server
 
 1. İlk olarak kendi kullanıcı bilgilerimiz olan `wiener:peter` ile login oldum ve uygulamanın `/login2` adresindeki 2FA doğrulama adımına yönlendirdiğini gördüm. Bu aşamada request içinde `verify=wiener` cookie değeri bulunuyordu.
 
-![2FA verify cookie](images/lab8_1.png)
+![2FA verify cookie](images/lab8/1.png)
 
 2. `/login2` request'ini Burp Repeater'a gönderdim ve `verify` cookie değerini `wiener` yerine `carlos` olarak değiştirdim. Uygulama bu değeri kabul ederek hedef kullanıcı için 4 haneli security code isteyen 2FA formunu döndürdü.
 
-![Verify cookie changed to carlos](images/lab8_2.png)
+![Verify cookie changed to carlos](images/lab8/2.png)
 
 3. 2FA formuna gönderilen `POST /login2` request'ini Burp Intruder'a gönderdim. Request'te `verify=carlos` cookie değerini korudum ve `mfa-code` parametresini payload position olarak işaretledim.
 
 4. Payload type olarak `Numbers` seçtim. 4 haneli MFA kodunu brute-force etmek için payload aralığını `1000` - `9999` olarak ayarladım.
 
-![MFA code brute-force setup](images/lab8_3.png)
+![MFA code brute-force setup](images/lab8/3.png)
 
 5. Attack sonucunda status code değerlerini karşılaştırdım. `1954` payload'ı diğer denemelerden farklı olarak `302` status code döndürdü. Response header'ındaki `Location: /my-account?id=carlos` değeri, hedef kullanıcı için login işleminin başarılı olduğunu doğruladı.
 
-![MFA brute-force result](images/lab8_4.png)
+![MFA brute-force result](images/lab8/4.png)
 
 6. Başarılı sonucu browser'da açarak `carlos` kullanıcısının hesabına eriştim.
 
-![Open successful response in browser](images/lab8_5.png)
+![Open successful response in browser](images/lab8/5.png)
 
 7. `/my-account` sayfasına erişince lab çözüldü.
 
-![Lab solved](images/lab8_6.png)
+![Lab solved](images/lab8/6.png)
 
 ## 5. Impact
 

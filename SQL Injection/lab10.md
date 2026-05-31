@@ -25,11 +25,11 @@ Bu labda `category` parametresi SQL sorgusuna güvenli şekilde eklenmediği iç
 administrator:giuhl4xmu7tukqriehgs
 ```
 
-![Kullanıcı adı ve parola değerleri tek kolonda birleştirilerek döndürülüyor](images/lab10_1.png)
+![Kullanıcı adı ve parola değerleri tek kolonda birleştirilerek döndürülüyor](images/lab10/1.png)
 
 6. Elde ettiğim parola ile `administrator` hesabına giriş yaptım ve labı tamamladım.
 
-![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab10_2.png)
+![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab10/2.png)
 
 ## 4. Kullanılan Payloadlar
 

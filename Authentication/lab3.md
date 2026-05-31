@@ -20,21 +20,21 @@ Bu labda password reset akışında üretilen token doğru şekilde kullanıcı 
 
 1. Önce `wiener` kullanıcısı için password reset isteği oluşturdum. Uygulama reset linkini email client'a gönderdi.
 
-![Password reset email](images/lab3_1.png)
+![Password reset email](images/lab3/1.png)
 
 2. Email client üzerinden gelen reset linkine tıkladım ve yeni parola belirleme sayfasına gittim.
 
-![Reset password page](images/lab3_2.png)
+![Reset password page](images/lab3/2.png)
 
 3. Yeni parola formunu doldurup isteği Burp Suite ile yakaladım. İstek içinde hem reset token hem de `username=wiener` parametresi gönderildiğini gördüm.
 
-![Password reset request](images/lab3_3.png)
+![Password reset request](images/lab3/3.png)
 
 4. İstekteki `username` değerini `wiener` yerine `carlos` olarak değiştirdim ve yeni parolayı `123456` yaptım. Uygulama token'ın hangi kullanıcıya ait olduğunu kontrol etmek yerine request içindeki `username` parametresine güvendiği için `carlos` kullanıcısının parolası değiştirildi.
 
 5. Daha sonra `carlos:123456` bilgileriyle login oldum ve lab çözüldü.
 
-![Lab solved](images/lab3_4.png)
+![Lab solved](images/lab3/4.png)
 
 ## 5. Impact
 

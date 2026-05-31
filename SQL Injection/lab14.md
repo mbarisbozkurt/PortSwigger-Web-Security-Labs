@@ -22,11 +22,11 @@ Amaç, `TrackingId` cookie değeri üzerinden PostgreSQL `pg_sleep()` fonksiyonu
 
 3. Koşul `1=1` olduğu için veritabanı `pg_sleep(10)` fonksiyonunu çalıştırdı. İsteği gönderdiğimde response normal `200 OK` olarak döndü; ancak yanıt yaklaşık 10 saniye gecikmeli geldi. Bu davranış, sorgunun veritabanında çalıştığını ve `TrackingId` cookie değerinin SQL sorgusuna enjekte edilebildiğini gösterdi.
 
-![TrackingId cookie değeri üzerinden CASE WHEN ve pg_sleep(10) ile koşullu zaman gecikmesi tetikleniyor](images/lab14_1.png)
+![TrackingId cookie değeri üzerinden CASE WHEN ve pg_sleep(10) ile koşullu zaman gecikmesi tetikleniyor](images/lab14/1.png)
 
 4. Zaman gecikmesi başarıyla tetiklendiği için lab çözüldü.
 
-![pg_sleep payload'ı ile zaman tabanlı SQL injection doğrulandı ve lab tamamlandı](images/lab14_2.png)
+![pg_sleep payload'ı ile zaman tabanlı SQL injection doğrulandı ve lab tamamlandı](images/lab14/2.png)
 
 ## 4. Kullanılan Payloadlar
 

@@ -12,6 +12,11 @@ Bu labda `category` parametresi SQL sorgusuna güvenli şekilde eklenmediği iç
 
 1. Burp Suite ile kategori filtresini ayarlayan isteği yakaladım.
 2. `category` parametresine tek tırnak ekleyerek SQL injection davranışını kontrol ettim.
+
+![Tek tırnak ile SQL hatası alındı](images/lab7/1.png)
+
+![Tek tırnak payload'ı response içinde görünüyor](images/lab7/2.png)
+
 3. `UNION SELECT` ile farklı sayıda `NULL` değeri göndererek kolon sayısını test ettim.
 4. Üç adet `NULL` değeri gönderdiğimde uygulama hatasız cevap verdi:
 
@@ -19,7 +24,11 @@ Bu labda `category` parametresi SQL sorgusuna güvenli şekilde eklenmediği iç
 ' UNION SELECT NULL,NULL,NULL--
 ```
 
+![UNION SELECT ile üç kolon doğrulandı](images/lab7/3.png)
+
 5. Cevapta ürün listesi düzgün döndüğü için sorgunun üç kolon döndürdüğünü doğruladım ve lab tamamlandı.
+
+![Lab solved](images/lab7/4.png)
 
 ## 4. Kullanılan Payloadlar
 

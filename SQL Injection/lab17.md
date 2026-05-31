@@ -22,7 +22,7 @@ Amaç, out-of-band data exfiltration tekniğiyle `administrator` kullanıcısın
 
 3. Payload gönderildiğinde HTTP response normal şekilde döndü. Response içinde parola görünmedi; fakat veritabanı XML external entity çözümlemeye çalışırken OAST domainine DNS/HTTP etkileşimi oluşturdu.
 
-![TrackingId cookie değeri üzerinden XML external entity payload'ı ile administrator parolası OAST domainine eklenerek dışarı aktarılıyor](images/lab17_1.png)
+![TrackingId cookie değeri üzerinden XML external entity payload'ı ile administrator parolası OAST domainine eklenerek dışarı aktarılıyor](images/lab17/1.png)
 
 4. Burp Collaborator sekmesinde oluşan DNS isteklerini kontrol ettim. DNS sorgusunda OAST domaininin başında `exf20b...` değeri göründü. Bu değer `administrator` kullanıcısının parolasıydı:
 
@@ -30,11 +30,11 @@ Amaç, out-of-band data exfiltration tekniğiyle `administrator` kullanıcısın
 exf20bkcqjwpt4b30chi3
 ```
 
-![Burp Collaborator üzerinde DNS sorgusunda administrator parolası subdomain olarak görünüyor](images/lab17_2.png)
+![Burp Collaborator üzerinde DNS sorgusunda administrator parolası subdomain olarak görünüyor](images/lab17/2.png)
 
 5. Elde ettiğim parola ile `administrator` hesabına giriş yaptım ve labı tamamladım.
 
-![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab17_3.png)
+![administrator hesabıyla giriş yapıldı ve lab tamamlandı](images/lab17/3.png)
 
 ## 4. Kullanılan Payloadlar
 

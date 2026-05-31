@@ -24,23 +24,23 @@ Bu labda uygulama, geçerli bir kullanıcı adı için belirli sayıda hatalı p
 
 2. İlk aşamada `username` parametresini payload position olarak işaretledim ve attack type olarak `Sniper` seçtim. `password` değerini sabit tuttum. Her kullanıcı adını birden fazla kez denemek için username listesindeki değerleri tekrar edecek şekilde payload listesine ekledim.
 
-![Username enumeration attack setup](images/lab7_1.png)
+![Username enumeration attack setup](images/lab7/1.png)
 
 3. Attack sonucunda response'ları inceledim. Geçersiz kullanıcı adlarında normal hata response'u dönerken, `accounting` kullanıcısı için birkaç hatalı denemeden sonra `You have made too many incorrect login attempts. Please try again in 1 minute(s).` mesajı döndü. Bu farklılık, `accounting` kullanıcısının geçerli olduğunu gösterdi.
 
-![Account lock response](images/lab7_2.png)
+![Account lock response](images/lab7/2.png)
 
 4. Geçerli kullanıcı adını bulduktan sonra `username` değerini `accounting` olarak sabitledim. Bu kez `password` parametresini payload position olarak işaretledim ve PortSwigger candidate passwords listesini kullandım.
 
-![Password brute-force attack setup](images/lab7_3.png)
+![Password brute-force attack setup](images/lab7/3.png)
 
 5. Password brute-force sonucunda response length değerlerini karşılaştırdım. `computer` payload'ının diğer denemelerden farklı response length döndürdüğünü gördüm. Bu farklılık, doğru parolanın `computer` olduğunu gösterdi.
 
-![Password brute-force result](images/lab7_4.png)
+![Password brute-force result](images/lab7/4.png)
 
 6. Bulunan `accounting:computer` bilgileriyle giriş yaptım ve `/my-account` sayfasına erişince lab çözüldü.
 
-![Lab solved](images/lab7_5.png)
+![Lab solved](images/lab7/5.png)
 
 ## 5. Impact
 

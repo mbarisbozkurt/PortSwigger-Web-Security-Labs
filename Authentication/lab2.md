@@ -18,7 +18,7 @@ Bu labda uygulama, kullanıcı adı ve parola doğrulandıktan sonra 2FA kodu is
 
 1. Önce kendi hesabımla login olup uygulamanın 2FA akışını inceledim. Login işleminden sonra mail adresine security code gönderildiğini gördüm.
 
-![2FA security code](images/lab2_1.png)
+![2FA security code](images/lab2/1.png)
 
 2. Daha sonra hedef kullanıcı bilgileri olan `carlos:montoya` ile login oldum.
 
@@ -26,7 +26,7 @@ Bu labda uygulama, kullanıcı adı ve parola doğrulandıktan sonra 2FA kodu is
 
 4. Uygulama 2FA kontrolünü zorunlu tutmadığı için `carlos` kullanıcısının hesap sayfasına erişebildim ve lab çözüldü.
 
-![Lab solved](images/lab2_2.png)
+![Lab solved](images/lab2/2.png)
 
 ## 5. Impact
 

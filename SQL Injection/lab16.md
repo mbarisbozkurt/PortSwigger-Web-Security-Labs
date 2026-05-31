@@ -22,11 +22,11 @@ Amaç, SQL injection payload'ı ile veritabanı sunucusuna dış bir domaine DNS
 
 3. Payload gönderildiğinde HTTP response normal `200 OK` olarak döndü. Response içinde veri sızıntısı veya hata mesajı görünmedi; ancak sorgu veritabanında çalıştığı için sunucu OAST domainine out-of-band DNS isteği oluşturdu.
 
-![TrackingId cookie değeri üzerinden UTL_INADDR.GET_HOST_ADDRESS fonksiyonu ile OAST domainine out-of-band istek tetikleniyor](images/lab16_1.png)
+![TrackingId cookie değeri üzerinden UTL_INADDR.GET_HOST_ADDRESS fonksiyonu ile OAST domainine out-of-band istek tetikleniyor](images/lab16/1.png)
 
 4. Out-of-band interaction başarıyla oluştuğu için PortSwigger labı çözüldü.
 
-![Out-of-band SQL injection doğrulandı ve lab tamamlandı](images/lab16_2.png)
+![Out-of-band SQL injection doğrulandı ve lab tamamlandı](images/lab16/2.png)
 
 ## 4. Kullanılan Payloadlar
 
