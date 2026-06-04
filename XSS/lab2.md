@@ -26,6 +26,18 @@ Bu labda yorum alanına yazdığım değerin kaydedilip blog postunun altında o
 
 4. Blog postuna tekrar dönünce kaydedilen yorum sayfaya basıldı ve `alert(1)` çalıştı.
 
+Payload kaydedildikten sonra yorum alanındaki HTML şu yapıya dönüştü:
+
+```html
+<section class="comment">
+  <p>
+    <script>alert(1)</script>
+  </p>
+</section>
+```
+
+Yorum içeriği encode edilmediği için `<script>` tag'i sayfayı açan kullanıcının tarayıcısında çalıştı.
+
 ![Kaydedilen yorumdan alert çalışması](images/lab2/3.png)
 
 ## 4. Impact

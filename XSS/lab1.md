@@ -22,6 +22,14 @@ Bu labda arama kutusuna yazdığım değerin sayfaya olduğu gibi geri basıldı
 
 2. Search butonuna bastıktan sonra girdiğim değer sayfaya aynen yansıdı.
 
+Payload sonrasında HTML şu yapıya dönüştü:
+
+```html
+<h1>0 search results for '<script>alert(1)</script>'</h1>
+```
+
+Sayfa bu değeri encode etmediği için `<script>` tag'i gerçek HTML/JavaScript olarak yorumlandı.
+
 3. Tarayıcı `alert(1)` penceresini gösterdi. Yani uygulama arama değerini güvenli şekilde ele almıyordu; yazdığım kod direkt çalışıyordu.
 
 ![Alert popup tetiklenmesi](images/lab1/2.png)
