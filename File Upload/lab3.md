@@ -2,7 +2,7 @@
 
 ## 1. Lab Bilgisi
 
-**Difficulty:** Apprentice
+**Difficulty:** Practitioner
 
 ## 2. Vulnerability Özeti
 
